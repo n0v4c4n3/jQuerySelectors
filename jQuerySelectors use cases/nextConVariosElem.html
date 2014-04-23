@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>PruebaNext</title>
+		<meta name="generator" content="Studio 3 http://aptana.com/">
+		<meta name="author" content="Adriana">
+		<style type="text/css">
+			div, p {
+				width:110px;
+				height:40px;
+				margin:2px 8px 64px 8px;
+				float:left;
+				border:1px blue solid;
+			}
+		</style>
+		<script type="text/javascript" src="jquery.js"></script>
+		<!-- Date: 2011-06-04 -->
+	</head>
+	<body>
+		<h1>Ejemplo utilizando el método next() de jQuery</h1>
+		<div id="inicio">
+			Esta es la div 1
+			<div>
+				Hija (child) de div 1
+			</div>
+		</div>
+		<p>
+			Párrafo  1
+		</p>
+		<div>
+			Esta es la  div 2
+			<div>
+				Hija (child) de div 2
+			</div>
+		</div>
+		<div>
+			Esta es div 3
+			<div>
+				Hija (child) de div 3 
+			</div>
+		</div>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<button id="btnSiguiente1">
+			Próximo elemento sin filtrar (usamos "next"())
+		</button>
+		<button id="btnSiguiente2">
+			Próximo elemento filtrando con next('div')
+		</button>
+		<button id="btnSiguiente3">
+			Próximo párrafo filtrando con next('p')
+		</button>
+		<button id="reset">
+			Recargar
+		</button>
+		<script type="text/javascript">
+			var $elemActual = $("#inicio");
+			$elemActual.css("background", "red");
+
+			$("#btnSiguiente1").click( function () {
+
+				if(!$elemActual.next().length) {
+					alert("No quedan elementos!");
+					return false;
+				}
+
+				$elemActual = $elemActual.next();
+
+				$("div,p").css("background", "");
+				$elemActual.css("background", "red");
+			});
+			$("#btnSiguiente2").click( function () {
+
+				if(!$elemActual.next('div').length) {
+					alert("No hay elementos coincidentes!");
+					return false;
+				}
+
+				$elemActual = $elemActual.next('div');
+
+				$("div,p").css("background", "");
+				$elemActual.css("background", "red");
+			});
+			$("#btnSiguiente3").click( function () {
+
+				if(!$elemActual.next('p').length) {
+					alert("No hay elementos coincidentes!");
+					return false;
+				}
+
+				$elemActual = $elemActual.next('p');
+
+				$("div,p").css("background", "");
+				$elemActual.css("background", "red");
+			});
+			$("#reset").click( function () {
+				location.reload();
+			});
+		</script>
+	</body>
+</html>

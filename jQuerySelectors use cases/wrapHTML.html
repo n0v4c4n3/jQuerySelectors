@@ -1,0 +1,33 @@
+
+<html>
+	<head>
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript">
+			$(document).ready( function() {
+				$("button").click( function() {
+					$("p").wrap("<div><\/div>");
+				});
+			});
+		</script>
+		<style type="text/css">
+			div {
+				display:block;
+				background-color: #CCCCFF;
+				border-color: #343299;
+				border-style: dotted;
+				}
+		</style>
+	</head>
+	<body>
+	
+	<p>
+		Primer p&aacute;rrafo.
+	</p>
+	<p >
+		Segundo p&aacute;rrafo.
+	</p>
+	<button>
+		Envolver todos los p&aacute;rrafos con un tag <pre>div</pre>
+	</button>
+</body>
+</html>

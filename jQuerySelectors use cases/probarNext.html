@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>probarNext</title>
+		<meta name="generator" content="Studio 3 http://aptana.com/">
+		<meta name="author" content="Adriana">
+		<script type="text/javascript" src="jquery.js"></script>
+		<!-- Date: 2011-06-05 -->
+	</head>
+	<body>
+	<ul> 
+<li>list item 1</li> 
+<li>list item 2</li> 
+<li class='tercer-item'>list item 3</li>
+<li>list item 4</li> 
+<li>list item 5</li> 
+</ul> 
+
+<script type="text/javascript">
+//Cambiarle el color de fondo al 4° elemento
+$(document).ready(function() {
+	$('li.tercer-item').next().css('background-color', 'red');	
+});
+
+</script>
+
+	</body>
+</html>

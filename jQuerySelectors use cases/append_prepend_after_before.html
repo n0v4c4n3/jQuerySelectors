@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>agregarHtmlASelector</title>
+		<meta name="generator" content="Studio 3 http://aptana.com/">
+		<meta name="author" content="Adriana">
+ 
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	
+  $("button#btnFinal").click(function(){
+    $("p").append(" <strong>Texto agregado al final con negrita<\/strong>.");
+  });
+  
+   $("button#btnInicio").click(function(){
+    $("p").prepend(" <em>Texto agregado al principio en itálica<\/em>.");
+  });
+  
+   $("button#btnDespues").click(function(){
+     $("p").after("<em>Texto agregado después del párrafo en itálica<\/em>."); 
+  });
+ 
+  $("button#btnAntes").click(function(){
+     $("p").before("<strong>Texto agregado antes del párrafo en negrita<\/strong>."); 
+  });
+});
+</script>
+</head>
+
+<body>
+<h2>Esto es encabezado 2</h2>
+<p>Esto es párrafo</p>
+<p>Este es otro párrafo</p>
+<button id="btnAntes">Probar agregar html antes del inicio de los párrafos</button>
+<button id="btnInicio">Probar agregar html al inicio de los párrafos</button>
+<button id="btnFinal">Probar agregar html al final de los párrafos</button>
+<button id="btnDespues">Probar agregar html después de los párrafos</button>
+</body>
+</html>
+
+
+ 
